@@ -73,7 +73,7 @@ flowchart LR
 
 用户登录认证界面，支持 JWT Token 会话管理。
 
-![登录页面](./screenshots/login.png)
+![登录页面](login.png)
 
 ---
 
@@ -81,7 +81,7 @@ flowchart LR
 
 登录后进入主界面，支持安全知识问答、Token 消耗统计、引用来源展示。
 
-![主界面问答](./screenshots/chat.png)
+![主界面问答](chat.png)
 
 ---
 
@@ -89,7 +89,7 @@ flowchart LR
 
 点击"引用来源"按钮，可查看回答依据的知识来源，支持溯源验证。
 
-![引用来源](./screenshots/sources.png)
+![引用来源](sources.png)
 ## 🚀 快速开始
 
 ### 前置要求
