@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: #0a1628;
+  color: #e0e8f0;
+  min-height: 100vh;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1628;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00d4ff;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+.animate-pulse-slow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Markdown 渲染样式 */
+.markdown-body h2 {
+  color: #00d4ff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.75rem 0 0.5rem 0;
+  border-bottom: 1px solid #1e3a5f;
+  padding-bottom: 0.25rem;
+}
+.markdown-body h3 {
+  color: #4dc9f6;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.5rem 0 0.25rem 0;
+}
+.markdown-body p {
+  margin: 0.4rem 0;
+  line-height: 1.7;
+}
+.markdown-body ul, .markdown-body ol {
+  padding-left: 1.25rem;
+  margin: 0.4rem 0;
+}
+.markdown-body li {
+  margin: 0.2rem 0;
+  line-height: 1.6;
+}
+.markdown-body code {
+  background: #152240;
+  color: #00d4ff;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+}
+.markdown-body pre {
+  background: #0f1f3d;
+  border: 1px solid #1e3a5f;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+.markdown-body pre code {
+  background: transparent;
+  color: #e0e8f0;
+  padding: 0;
+}
+.markdown-body strong {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+.markdown-body blockquote {
+  border-left: 3px solid #00d4ff;
+  padding-left: 0.75rem;
+  color: #8899aa;
+  margin: 0.5rem 0;
+}
+.markdown-body a {
+  color: #00d4ff;
+  text-decoration: underline;
+}
